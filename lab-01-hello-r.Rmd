@@ -4,8 +4,8 @@ author: "Areej Mohmmed Osman"
 date: "1/2/2021"
 output: 
   html_document: 
-    fig_width: 14
-    fig_height: 12
+    fig_width: 16
+    fig_height: 13
 ---
 
 University ID: 1234567
@@ -20,5 +20,12 @@ library(datasauRus)
 
 
 ### Lab Exercise
+EX3
+```{r star}
+star_data <-datasaurus_dozen %>%filter(dataset == "star")
+ ggplot(data = star_data, mapping = aes(x = x, y = y)) +geom_point()
 
-answer for task3
+```
+```{r star cor }
+star_data %>%summarize(r = cor(x, y))
+```
